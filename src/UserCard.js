@@ -29,13 +29,11 @@ const imgSpan = (num) => {
 }
 
 const imgSort = () => {
-    debugger
     if(sortCount === 0) {
         sortType = Math.floor(Math.random() * 3) + 1;
         (sortType === 2) ? sortCount = 3 : sortCount = 2;
     }
     
-    debugger
     switch(sortType) {
         case 1: (sortCount === 3) ? num = Math.floor(Math.random() * 8) : num = Math.floor(Math.random() * 4) + 8
                 sortCount--
@@ -50,11 +48,6 @@ const imgSort = () => {
                 console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
     }
-    
-    debugger
-    
-    
-    debugger
 }
 
 
