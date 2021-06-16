@@ -35,7 +35,7 @@ const imgSort = () => {
     }
     
     switch(sortType) {
-        case 1: (sortCount === 3) ? num = Math.floor(Math.random() * 8) : num = Math.floor(Math.random() * 4) + 8
+        case 1: (sortCount === 2) ? num = Math.floor(Math.random() * 8) : num = Math.floor(Math.random() * 4) + 8
                 sortCount--
                 console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
@@ -43,7 +43,7 @@ const imgSort = () => {
                 sortCount--
                 console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
-        case 3: (sortCount === 3) ? num = Math.floor(Math.random() * 4) + 8 : num = Math.floor(Math.random() * 8)
+        case 3: (sortCount === 2) ? num = Math.floor(Math.random() * 4) + 8 : num = Math.floor(Math.random() * 8)
                 sortCount--
                 console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
