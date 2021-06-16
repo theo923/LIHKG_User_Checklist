@@ -12,7 +12,6 @@ const UserData = () => {
 
 export const UserComponents = ({keyword}) => {
     const [users, setUsers] = React.useState([])
-    const count = React.useState(0)
     React.useEffect(()=>{
       UserData().then(user => {
         setUsers(Object.entries(user))
@@ -20,9 +19,9 @@ export const UserComponents = ({keyword}) => {
     }, [])
     
     return (
-        <div className='container mx-auto 2xl:px-72 xl:px-64 lg:px-50 md:px-20 px-5 text-center'>
+        <div className='container mx-auto 2xl:px-62 xl:px-64 lg:px-50 md:px-20 px-5 text-center'>
             <div className='grid h-full w-full grid-cols-1 md:grid-cols-3 lg:gap-10 md:gap-6 gap-2' >
-            {users.filter(ID => ID[0].includes(keyword)).map((id,idx) => <UserCard key={idx} id={id} num={count}/>)}
+            {users.filter(ID => ID[0].includes(keyword)).map((id, idx, arr) => <UserCard key={idx} id={id} idx={idx} arr={arr}/>)}
             </div>
         </div>
     )
