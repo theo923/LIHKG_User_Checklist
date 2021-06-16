@@ -4,7 +4,7 @@ let num = 0;
 let sortCount = 0;
 let sortType = 0;
 
-export const UserCard = ({id, idx, arr}) => {
+export const UserCard = ({ id, idx, arr }) => {
     imgSort()
     
     if(idx === arr.length - 1){ 
@@ -27,7 +27,7 @@ export const UserCard = ({id, idx, arr}) => {
     )
 }
 
-const imgSpan = (num) => {
+const imgSpan = num => {
     if((num >= 8) && document.documentElement.clientWidth >= 1000) return "col-span-2 "
 }
 
@@ -35,18 +35,14 @@ const imgSort = () => {
     if(sortCount === 0) {
         sortType = Math.floor(Math.random() * 3) + 1;
         (sortType === 2) ? sortCount = 3 : sortCount = 2;
-        console.log('==============================')
     }
     
     switch(sortType) {
         case 1: (sortCount === 2) ? num = Math.floor(Math.random() * 8) : num = Math.floor(Math.random() * 4) + 8
-                console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
         case 2: num = Math.floor(Math.random() * 8)
-                console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
         case 3: (sortCount === 2) ? num = Math.floor(Math.random() * 4) + 8 : num = Math.floor(Math.random() * 8)
-                console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
         default:    console.log('Plugin failed')
     }

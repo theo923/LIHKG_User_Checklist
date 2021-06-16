@@ -10,7 +10,7 @@ const UserData = () => {
         })
   }
 
-export const UserComponents = ({keyword}) => {
+export const UserComponents = ({ keyword }) => {
     const [users, setUsers] = React.useState([])
     React.useEffect(()=>{
       UserData().then(user => {
