@@ -7,7 +7,7 @@ export const UserCard = ({id, num}) => {
     return(
         <div className={`card shadow-xl image-full ${imageSort(num[0])} `}>
             <figure >
-                <img src={imgSrc[num[0]]}></img>
+                <img src={imgSrc[num[0]]} alt={id[0]}></img>
             </figure> 
             <div className="justify-end card-body">
                 <h2 className="card-title">{id[0]}</h2> 
@@ -22,7 +22,7 @@ export const UserCard = ({id, num}) => {
 }
 
 const imageSort = (num) => {
-    if((num == 3 || num == 4 || num == 0 || num == 7 || num == 12) && document.documentElement.clientWidth >= 1000) return "col-span-2"
+    if((num === 3 || num === 4 || num === 0 || num === 7 || num === 12) && document.documentElement.clientWidth >= 1000) return "col-span-2"
 }
 
 
