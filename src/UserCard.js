@@ -47,6 +47,7 @@ const imgSort = () => {
                 sortCount--
                 console.log(`sortType ${sortType}, num ${num}, sortCount ${sortCount}`)
                 break
+        default:    console.log('Plugin failed')
     }
 }
 
